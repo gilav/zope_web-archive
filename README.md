@@ -10,6 +10,7 @@ The database file (Data.fs) is for now on a volume /zope_instance/var that has t
 Zope exposed on port 8080
 Zope admin user/password to be changed in Dockerfile as needed.
 
+Available on dockerhub as gilou3000/warchive:tagname (still have to test if it run as it shloud).
 
 Feel free to contact me in case you try it and have issues...
 
