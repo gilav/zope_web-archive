@@ -4,12 +4,19 @@ A web archive based on Zope2.
 Old but good technology 
 
 I tried to dockerize it, that is the result.
-A skeleton of the APP is needed by the Dockerfile, it contains the needed Zope products, some modified by me, and a minimum data.fs file.
 
-The database file (Data.fs) is for now on a volume /zope_instance/var that has to be mounted (-v /SOME_OS_PATH:/zope_instance/var) when creating the container.
-Zope exposed on port 8080
+A skeleton of the APP is needed, it contains the needed Zope products, some modified by me, and a minimum data.fs file containing the web archive code.
+This skeleton is present in the docker image at path: BACKUP_WARCHIVE_SKELETON
+It need to be copied out of the container, then copied at the OS path of the mounted volume.
+
+The volume is: /zope_instance/var and has to be mounted (-v /SOME_OS_PATH:/zope_instance/var) when creating the container.
+Zope exposed on port 8080.
 Zope admin user/password to be changed in Dockerfile as needed.
 
+
+<b>A) The way I use the image is like:</b>
+
+Available on dockerhub as gilou3000/warchive:initial.
 
 <pre>
 ##
@@ -46,7 +53,9 @@ docker run  -v /home/user/zope_var:/zope_instance/var -p 8080:8080/tcp gilou3000
 </pre>
 
 
-Available on dockerhub as gilou3000/warchive:tagname (still have to test if it run as it shloud).
+<b>B) The way I build the image (skeleton needed) is:</b>
+TBD...
+
 
 Feel free to contact me in case you try it and have issues...
 
