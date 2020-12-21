@@ -1,5 +1,5 @@
 #
-# this shaloud build a docker image for the zope 2 Warchive app
+# this should build a docker image for the zope 2 Warchive app
 #
 # Needs:
 # - an instance of the warchive in current path, named: instance214_2
